@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+
+    <!--     top bar    -->
+    <div class="top-bar" id="top-bar">
+        <div class="tabs centered-flex" id="tabs">
+            <p class="tab-link tabs-active" onclick="changeTab('checklist-container')">Notes</p>
+            <p class="tab-link" onclick="changeTab('app-container')">To-do</p>
+        </div>
+        <button class="btn add-btn centered-flex" id="menu-btn">
+            <img class="img1" src="assets/baseline_expand_more_black_48dp.png" alt="" style="display: flex">
+        </button>
+    </div>
+
+
+
+
+    <div class="app-container" id="app-container">
+        <!--   main canvas containing notes     -->
+        <div class="canvas-container" id="canvas-container">
+            <div class="h1txt-container">
+                <h1 class="h1-txt" id="h1-txt">My Notes</h1>
+                <button class="btn add-btn centered-flex" id="add-btn"><img src="assets/baseline_add_black_48dp.png" alt=""></button>
+            </div>
+            <div class="autofit-grid main-canvas" id="main-canvas"></div>
+        </div> 
+    </div>
+
+    <div class="app-container display-hide" id="checklist-container">
+        <!--   todo containing notes     -->
+        <div class="todo-container" id="todo-container">
+            <div class="h1txt-container h1txt-todo" id="h1txt-todo">
+                <h1 class="h1-txt">To-do</h1>
+                <div class="todo-button centered-flex" id="todo-button">
+                    <input type="text" class="input-todo" id="input-todo">
+                    <button class="btn add-btn centered-flex" id="add-todolist-btn">Add</button>
+                </div>
+            </div>
+
+            <div class="autofit-grid main-canvas" id="todo-canvas">
+            </div>
+        
+        </div> 
+    </div>
+
+
+
+
+    <!--  add note form   -->
+    <div class="form-container centered-flex" id="form-container">
+        <div class="form light-theme centered-flex" id="form">
+            <input type="text" placeholder="Title" class="input-title" id="input-title">
+            <textarea type="" value="" placeholder="add note" id="textbox" cols="30" rows="10" class="textbox"></textarea>
+            <button class="btn add-btn centered-flex" id="save-btn"><img src="assets/baseline_done_black_48dp.png" alt=""></button>
+            <button class="btn add-btn centered-flex" id="close-btn"><img src="assets/baseline_close_black_48dp.png" alt=""></button>
+        </div>
+    </div>
+
+
+
+    <!-- view note -->
+    <div class="note-container centered-flex" id="note-container">
+        <div class="form light-theme" id="note">
+            <h1 class="note-title-container" id="note-title-container"></h1>
+            <p class="note-content" id="note-content"></p>
+            <div class="note-container-btns" id="note-container-btns">
+                <button class="btn add-btn centered-flex" id="edit-btn"><img src="assets/baseline_article_black_48dp.png" alt=""></button>
+                <button class="btn add-btn centered-flex" id="del-btn"><img src="assets/baseline_delete_black_48dp.png" alt=""></button>
+            </div>
+            <button class="btn add-btn centered-flex" id="note-btn"><img src="assets/baseline_close_black_48dp.png" alt=""></button>
+        </div>
+    </div>
+
+    
+
+
+
+    <script src="./logic.js"></script>
+    <script>
+    
+        main();
+        
+    </script>
+</body>
+</html>
